@@ -1,21 +1,23 @@
 package com.caominh.identity_service.dto.request;
 
 import jakarta.validation.constraints.Size;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
+import lombok.experimental.FieldDefaults;
+
 
 import java.time.LocalDate;
 
-@Getter
-@Setter
+@Builder
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class UserCreationRequest {
-
     @Size(min=8, message = "USERNAME_INVALID")
-    private String username;
-
+    String username;
     @Size(min=8, max=24, message = "PASSWORD_INVALID")
-    private String password;
-    private String firstName;
-    private String lastName;
-    private LocalDate dob;
+    String password;
+    String firstName;
+    String lastName;
+    LocalDate dob;
 }
