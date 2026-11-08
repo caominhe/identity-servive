@@ -9,6 +9,7 @@ public enum ErrorCode {
 
     UNCATEGORIZED_EXCEPTION(999,"Uncategorized Exception!"),
     USER_EXISTED(1001, "User Existed!"),
+    USER_NOT_EXISTED(1001, "User NOT Existed!"),
     USERNAME_INVALID(1003, "Username must be at least 8 characters"),
     PASSWORD_INVALID(1004, "Password must be at least 8 characters")
     ;
