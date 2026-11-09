@@ -40,6 +40,13 @@
 	<!-- Dependencies -->
 	<dependencies>
 
+		<!-- JWT TOKEN -->
+		<dependency>
+			<groupId>com.nimbusds</groupId>
+			<artifactId>nimbus-jose-jwt</artifactId>
+			<version>10.0.2</version>
+		</dependency>
+
 		<!-- Spring Boot Validation -->
 		<dependency>
 			<groupId>org.springframework.security</groupId>
