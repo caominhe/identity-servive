@@ -4,7 +4,6 @@ import com.caominh.identity_service.dto.request.UserCreationRequest;
 import com.caominh.identity_service.dto.request.UserUpdateRequest;
 import com.caominh.identity_service.dto.response.ApiResponse;
 import com.caominh.identity_service.dto.response.UserResponse;
-import com.caominh.identity_service.entity.User;
 import com.caominh.identity_service.service.UserService;
 
 import jakarta.validation.Valid;
@@ -41,6 +40,14 @@ public class UserController {
     @GetMapping("/{userId}")
     UserResponse getUserId(@PathVariable("userId") String userId){
         return userService.getUserId(userId);
+    }
+
+    @GetMapping("/my-info")
+    ApiResponse<UserResponse> getMyInfo(){
+
+        return ApiResponse.<UserResponse>builder()
+                .result(userService.getMyInfo())
+                .build();
     }
 
     @PutMapping("/{userId}")
