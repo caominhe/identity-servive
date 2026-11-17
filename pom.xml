@@ -40,11 +40,10 @@
 	<!-- Dependencies -->
 	<dependencies>
 
-		<!-- JWT TOKEN -->
+		<!-- OAUTH2 -->
 		<dependency>
-			<groupId>com.nimbusds</groupId>
-			<artifactId>nimbus-jose-jwt</artifactId>
-			<version>10.0.2</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
 		</dependency>
 
 		<!-- Spring Boot Validation -->

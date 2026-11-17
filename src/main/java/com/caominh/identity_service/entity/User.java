@@ -26,6 +26,4 @@ public class User {
     String firstName;
     String lastName;
     LocalDate dob;
-
-
 }
